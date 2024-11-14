@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: justify;
+    color: black;
+    text-decoration: none;
+}
+
+
+body{
+    padding: 2rem 4rem 0 4rem;
+}
+
+
+:root{
+    --borda-header: 1rem 8rem;
+    --borda-header-resp: 1rem 3rem;
+    --borda-header-resp-cel: 1rem;
+}
+
+html {
+    background-color: #f2f5f7;
+}
+
+h2 {
+    margin: var(--borda-header);
+    text-align: center;
+
+    /*border: solid 1px black;*/
+}
+h3 {
+    margin: var(--borda-header);
+    text-align: center;
+
+    /*border: solid 1px black;*/
+}
+b {
+    font-weight: 700;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid black;
+}
+
+h4{
+    padding: 1.5rem;
+    font-size: rem;
+}
+
+p{
+    margin: 1rem;
+}
+
+.logoUni{
+    max-width: 26%;
+    margin: 2rem 37%;
+}
+
+.logoUni:hover{
+    max-width: 27%;
+    margin: 2rem 36.5%;   
+    transition: .2s ease-in-out;
+}
+
+.outrasPesq {
+    border: solid 1px black;
+    padding: 0 1rem 2rem 1rem;
+}
+
+.pesq{
+    border: solid 1px blue;
+    height: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.cardPesq {
+    max-width: 49%;
+    min-width: 32%;
+    height: 25vh;
+    border: solid 1px black;
+    margin: 1rem 0 ;
+    border-radius: 10px;
+}
+
+
+.carousel-container {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    max-width: 75vw;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.bloquinho{
+    width: 80%;
+
+    grid-column: 2;
+    grid-row: 1;
+    margin: 1rem ;
+    text-align: center;
+    align-content: center;
+}
+
+.resumo{
+    grid-column: span 2;
+    grid-row: 2;
+    align-self: center;
+
+    padding: 2rem;
+}
+
+.icone_trabalho{
+    width: 50px;
+    margin: 1.5rem 1rem 1rem 3rem;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.LerAgora {
+    grid-row: 2;
+    grid-column: span 2 / 3;
+    text-align: center;
+    margin: 2rem;
+}
+
+.LerAgora a {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.LerAgora a::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: -8px;
+    bottom: -8px;
+    background-color: #0056b3;
+    border-radius: 8px;
+    z-index: -1;
+    transition: all 0.2s ease;
+}
+
+.LerAgora a:hover {
+    transform: translate(-8px, -8px);
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+.LerAgora a::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: 200px;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 15% 80% 5%;
+    font-size: 1.5rem;
+    color: white;
+
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#prev {
+    left: 10px;
+    padding: 5px;
+}
+
+#next {
+    padding: 5px;
+    right: 10px;
+}
+
+
+.OrIcon{
+    width: 1.3%;
+}
+.OrTxt{
+    color: black;
+    text-decoration: none;
+}
+
+h1{
+    width: 85vw;
+}
+.DivNomes{
+    width: 85vw;  
+    font-weight: 500;
+    font-size: 17px;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    h2 {
+        margin: var(--borda-header-resp);
+        text-align: center;
+    
+        /*border: solid 1px black;*/
+    }
+    h3 {
+        margin: var(--borda-header-resp);
+        text-align: center;
+    
+        /*border: solid 1px black;*/
+    }
+    .OrIcon{
+        width: 1rem;
+    }
+    footer {
+        margin: 0 0 1rem 0;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+
+    h2 {
+        margin: var(--borda-header-resp-cel);
+        text-align: center;
+    
+        /*border: solid 1px black;*/
+    }
+    h3 {
+        margin: var(--borda-header-resp-cel);
+        text-align: center;
+    
+        /*border: solid 1px black;*/
+    }
+    body{
+        padding: 2rem 1rem 0 1rem;
+    }
+    .OrIcon{
+        width: 1rem;
+    }
+    footer {
+        margin: 0 0 1rem 0;
+    }
+  }
+
+
+  @media screen and (max-width: 799px) {
+    .LerAgora {
+        margin: 2.5rem 0 0 0;
+    }
+    .LerAgora a {
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+    .icone_trabalho{
+        width: 50px;
+        margin: 1.5rem 1rem 1rem 2rem;
+        grid-row: 1;
+        grid-column: 1;
+    }
+  }
+
+
+  @media screen and (max-width: 599px) {
+
+    .LerAgora {
+        margin: 4rem 0 0 0;
+    }
+    .LerAgora a {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+    .icone_trabalho{
+        width: 40px;
+        margin: 1.5rem 1rem 1rem 1rem;
+        grid-row: 1;
+        grid-column: 1;
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    .LerAgora {
+        margin: 4rem 0 0 0;
+    }
+    .LerAgora a {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+    .icone_trabalho{
+        display: none;
+        width: 40px;
+        margin: 0;
+
+    }
+    .carousel-item {
+        min-width: 100%;
+        height: 240px;
+        font-size: 1.5rem;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+    
+    }
+    .bloquinho{
+        width: 84%;
+        margin: 1rem 0 0 0;
+        text-align: center;
+        align-content: center;
+    }
+    .LerAgora {
+        margin: 0 0 0 0;
+    }
+    #prev {
+        left: -5px;
+        padding: 5px;
+    }
+    
+    #next {
+        padding: 5px;
+        right: -5px;
+    }
+  }
